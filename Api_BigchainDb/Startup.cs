@@ -1,18 +1,15 @@
 ﻿using Api_BigchainDb.Middleware;
+using Api_BigchainDb.DatabaseSettings;
 using Api_BigchainDb.Repository;
+using Api_BigchainDb.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Api_BigchainDb
 {
@@ -27,6 +24,19 @@ namespace Api_BigchainDb
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<UsertoreDatabaseSettings>(
+                Configuration.GetSection(nameof(UsertoreDatabaseSettings)));
+
+            services.AddSingleton<IUserstoreDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<UsertoreDatabaseSettings>>().Value);
+
+            services.AddHttpContextAccessor();
+
+            services.AddSingleton<UserService>();
+
+            services.Configure<UsertoreDatabaseSettings>(Configuration.GetSection("BlockchainstoreDatabaseSettings"));
+            services.AddScoped<IUserService, UserService>();
+
             services.AddControllers();
 
             services.AddControllers()
@@ -38,7 +48,7 @@ namespace Api_BigchainDb
             services.AddSingleton<IContactsRepository, ContactsRepository>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             app.ApplyUserKeyValidation();
 
@@ -57,6 +67,8 @@ namespace Api_BigchainDb
             {
                 endpoints.MapControllers();
             });
+
+            loggerFactory.AddFile("Logs/mylog-{Date}.txt");
         }
     }
 }

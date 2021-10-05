@@ -1,9 +1,6 @@
 ﻿using Api_BigchainDb.Repository;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 namespace Api_BigchainDb.Middleware
@@ -12,11 +9,12 @@ namespace Api_BigchainDb.Middleware
     {
         private readonly RequestDelegate _next;
         private IContactsRepository ContactsRepo { get; set; }
-
-        public UserKeyValidatorsMiddleware(RequestDelegate next, IContactsRepository _repo)
+        private readonly ILogger _logger;
+        public UserKeyValidatorsMiddleware(RequestDelegate next, IContactsRepository _repo, ILogger<UserKeyValidatorsMiddleware> logger)
         {
             _next = next;
             ContactsRepo = _repo;
+            _logger = logger;
         }
 
         public async Task Invoke(HttpContext context)
@@ -24,8 +22,10 @@ namespace Api_BigchainDb.Middleware
             if (!context.Request.Headers.Keys.Contains("user-key") ||
                 !ContactsRepo.CheckValidUserKey(context.Request.Headers["user-key"]))
             {
-                context.Response.StatusCode = 403;//Forbidden Request                
+                context.Response.StatusCode = StatusCodes.Status403Forbidden;             
                 await context.Response.WriteAsync("User Key is missing or invalid");
+                _logger.LogInformation("Request:" + context.Request.Path + "Method: " + context.Response.StatusCode);
+
                 return;
             }
 
@@ -46,6 +46,7 @@ namespace Api_BigchainDb.Middleware
             //    }
             //}
             #endregion
+            //_logger.LogInformation("Request:" + context.Request.Path + "Method: " + context.Response.StatusCode);
 
             await _next.Invoke(context);
         }
