@@ -1,9 +1,11 @@
 ﻿namespace Api_BigchainDb.DatabaseSettings
 {
-    public class UsertoreDatabaseSettings : IUserstoreDatabaseSettings
+    public class StoreDatabaseSettings : IStoreDatabaseSettings
     {
-        public string UserCollectionName { get; set; }
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
+        public string UserCollectionName { get; set; }
+        public string BookCollectionName { get; set; }
+
     }
 }

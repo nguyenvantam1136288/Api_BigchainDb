@@ -12,4 +12,9 @@ namespace Api_BigchainDb.Services
         Task UpdateAsync(string id, User book);
         Task DeleteAsync(string id);
     }
+
+    public interface IBookService
+    {
+        Task<List<Books>> GetAllAsync();
+    }
 }

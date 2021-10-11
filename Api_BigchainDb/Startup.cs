@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Serialization;
+using Api_BigchainDb.Queue;
 
 namespace Api_BigchainDb
 {
@@ -24,18 +25,23 @@ namespace Api_BigchainDb
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<UsertoreDatabaseSettings>(
-                Configuration.GetSection(nameof(UsertoreDatabaseSettings)));
-
-            services.AddSingleton<IUserstoreDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<UsertoreDatabaseSettings>>().Value);
-
             services.AddHttpContextAccessor();
 
-            services.AddSingleton<UserService>();
+            services.Configure<StoreDatabaseSettings>(
+                Configuration.GetSection(nameof(StoreDatabaseSettings)));
 
-            services.Configure<UsertoreDatabaseSettings>(Configuration.GetSection("BlockchainstoreDatabaseSettings"));
+            services.AddSingleton<IStoreDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<StoreDatabaseSettings>>().Value);
+
+            services.AddSingleton<UserService>();
+            services.AddSingleton<BookService>();
+
+            services.Configure<StoreDatabaseSettings>(Configuration.GetSection("BlockchainstoreDatabaseSettings"));
+
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IBookService, BookService>();
+       
+            //services.AddScoped<IBackgroundTaskQueue, DefaultBackgroundTaskQueue>();
 
             services.AddControllers();
 

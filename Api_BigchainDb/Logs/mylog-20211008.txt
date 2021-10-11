@@ -1,0 +1,332 @@
+2021-10-08T10:40:40.1384640+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T10:40:40.1439996+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T10:40:40.1450495+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T10:40:40.1496494+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T10:40:40.1497015+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T10:40:40.1497605+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T10:40:43.3077065+07:00 0HMCA1LJ4PD5G:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'Newtonsoft.Json.Linq.JArray' to type 'Newtonsoft.Json.Linq.JObject'.
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.<Invoke>g__AwaitMatcher|8_0(EndpointRoutingMiddleware middleware, HttpContext httpContext, Task`1 matcherTask)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-08T10:40:46.9668407+07:00 0HMCA1LJ4PD5G:00000003 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'Newtonsoft.Json.Linq.JArray' to type 'Newtonsoft.Json.Linq.JObject'.
+   at lambda_method1(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-08T10:42:15.0402253+07:00 0HMCA1LJ4PD5G:00000004 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.ArgumentException: Can not convert Object to String.
+   at Newtonsoft.Json.Linq.JToken.op_Explicit(JToken value)
+   at Api_BigchainDb.Controllers.UserController.Create(JObject listUer) in D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb\Controllers\UserController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-08T13:50:10.7721305+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T13:50:10.7821970+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T13:50:10.7835823+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T13:50:10.7911680+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T13:50:10.7912655+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T13:50:10.7913607+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T13:50:36.4136416+07:00 0HMCA4VFOQ1C7:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'System.Collections.Generic.List`1[Api_BigchainDb.Models.User]' to type 'System.Collections.Generic.IEnumerable`1[System.Collections.Generic.List`1[Api_BigchainDb.Models.User]]'.
+   at Api_BigchainDb.Controllers.UserController.Create(List`1 listUer) in D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb\Controllers\UserController.cs:line 81
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-08T14:03:04.9106143+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T14:03:04.9157122+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T14:03:04.9177353+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T14:03:04.9233662+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T14:03:04.9235142+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T14:03:04.9235664+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T15:39:28.6351808+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T15:39:28.6405287+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T15:39:28.6414352+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T15:39:42.4242485+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T15:39:42.4243268+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T15:39:42.4243729+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T15:40:10.3110814+07:00 0HMCA6SM8AMMR:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T15:40:10.5237993+07:00 0HMCA6SM8AMMR:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidCastException: Unable to cast object of type 'System.Collections.Generic.List`1[Api_BigchainDb.Models.User]' to type 'System.Collections.Generic.IEnumerable`1[System.String]'.
+   at Api_BigchainDb.Controllers.UserController.Create(List`1 listUer) in D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb\Controllers\UserController.cs:line 100
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-10-08T15:41:49.7915855+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T15:41:49.8005156+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T15:41:49.8018300+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T15:41:49.8104557+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T15:41:49.8105847+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T15:41:49.8106824+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T15:42:06.6608283+07:00 0HMCA6TS92P8B:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T15:43:01.6482525+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T15:43:01.6565811+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T15:43:01.6575322+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T15:43:01.6626260+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T15:43:01.6626791+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T15:43:01.6627019+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T15:43:06.2348043+07:00 0HMCA6UHMN1P8:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T15:43:21.3232169+07:00  [INF] Queued work item c3208296-a35d-4685-a3c5-b6d1e1fe8023 is starting. (1cbffc4e)
+2021-10-08T15:43:26.3460894+07:00  [INF] Queued work item c3208296-a35d-4685-a3c5-b6d1e1fe8023 is running. 1/3 (a4c3f176)
+2021-10-08T15:43:31.3640653+07:00  [INF] Queued work item c3208296-a35d-4685-a3c5-b6d1e1fe8023 is running. 2/3 (a4c3f176)
+2021-10-08T15:43:36.3792409+07:00  [INF] Queued work item c3208296-a35d-4685-a3c5-b6d1e1fe8023 is running. 3/3 (a4c3f176)
+2021-10-08T15:43:36.3793360+07:00  [INF] Queued Background Task c3208296-a35d-4685-a3c5-b6d1e1fe8023 is complete. (1d1ef826)
+2021-10-08T15:43:36.3821202+07:00  [INF] Queued work item cf8e7508-79fc-47a5-8d61-2b2db4563be8 is starting. (1cbffc4e)
+2021-10-08T15:43:41.3937566+07:00  [INF] Queued work item cf8e7508-79fc-47a5-8d61-2b2db4563be8 is running. 1/3 (a4c3f176)
+2021-10-08T15:43:46.4080159+07:00  [INF] Queued work item cf8e7508-79fc-47a5-8d61-2b2db4563be8 is running. 2/3 (a4c3f176)
+2021-10-08T15:43:51.4292958+07:00  [INF] Queued work item cf8e7508-79fc-47a5-8d61-2b2db4563be8 is running. 3/3 (a4c3f176)
+2021-10-08T15:43:51.4293447+07:00  [INF] Queued Background Task cf8e7508-79fc-47a5-8d61-2b2db4563be8 is complete. (1d1ef826)
+2021-10-08T15:43:51.4327582+07:00  [INF] Queued work item d8b8df7e-7bb7-41d9-8e63-852c34ea9fc8 is starting. (1cbffc4e)
+2021-10-08T15:43:56.4412198+07:00  [INF] Queued work item d8b8df7e-7bb7-41d9-8e63-852c34ea9fc8 is running. 1/3 (a4c3f176)
+2021-10-08T15:44:01.4508861+07:00  [INF] Queued work item d8b8df7e-7bb7-41d9-8e63-852c34ea9fc8 is running. 2/3 (a4c3f176)
+2021-10-08T15:44:06.4559185+07:00  [INF] Queued work item d8b8df7e-7bb7-41d9-8e63-852c34ea9fc8 is running. 3/3 (a4c3f176)
+2021-10-08T15:44:06.4559604+07:00  [INF] Queued Background Task d8b8df7e-7bb7-41d9-8e63-852c34ea9fc8 is complete. (1d1ef826)
+2021-10-08T20:26:56.0163858+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T20:26:56.0244946+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T20:26:56.0259577+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T20:26:56.0335541+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T20:26:56.0336284+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T20:26:56.0336877+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T20:38:43.4458624+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T20:38:43.4502058+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T20:38:43.4508862+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T20:38:43.4570515+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T20:38:43.4571406+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T20:38:43.4572074+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T20:40:53.3507913+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T20:40:53.3557541+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T20:40:53.3565111+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T20:40:53.3617341+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T20:40:53.3617989+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T20:40:53.3618768+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T20:42:24.4232756+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T20:42:24.4313807+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T20:42:24.4329138+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T20:42:24.4405530+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T20:42:24.4406329+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T20:42:24.4406800+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T20:49:37.0468920+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T20:49:37.0565443+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T20:49:37.0577671+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T20:49:37.0651882+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T20:49:37.0652503+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T20:49:37.0653268+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T20:57:03.7961176+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T20:57:03.8021011+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T20:57:03.8033846+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T20:57:03.8100540+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T20:57:03.8101372+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T20:57:03.8101759+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:00:43.4410018+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:00:43.4464776+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:00:43.4479674+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:00:43.4525193+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:00:43.4525727+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:00:43.4526074+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:13:24.5388505+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:13:24.5498925+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:13:24.5511553+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:13:24.5592534+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:13:24.5593449+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:13:24.5594256+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:13:58.8391754+07:00 0HMCACN5CINF2:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:21:23.4325701+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:21:23.4389367+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:21:23.4405252+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:21:23.4512279+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:21:23.4513274+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:21:23.4513795+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:21:48.6118673+07:00 0HMCACRK1R752:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:21:58.8171180+07:00  [INF] Queued work item b85c521e-fea0-4c2b-82b5-a713ffad11ce is starting. (1cbffc4e)
+2021-10-08T21:37:41.4578544+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:37:41.4718715+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:37:41.4733308+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:37:41.4827391+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:37:41.4828120+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:37:41.4828546+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:37:47.9248197+07:00 0HMCAD4NIML0O:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:37:47.9383762+07:00  [INF] Queued work item 2456c40f-3244-4a6a-9352-240ce91bbfec is starting. (1cbffc4e)
+2021-10-08T21:42:03.0207792+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:42:03.0255115+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:42:03.0263506+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:42:03.0311340+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:42:03.0312117+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:42:03.0312643+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:42:16.7010453+07:00 0HMCAD75IEP1P:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:42:16.7203899+07:00  [INF] Queued work item 8076bd46-94a9-409f-befa-99c5f6ceacc2 is starting. (1cbffc4e)
+2021-10-08T21:44:28.0168683+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:44:28.0225061+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:44:28.0237032+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:44:28.0309973+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:44:28.0311155+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:44:28.0311584+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:44:40.5313737+07:00 0HMCAD8GOMN9D:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:44:40.5446821+07:00  [INF] Queued work item 2bce18d0-0afa-4799-91f7-7361fb81e12e is starting. (1cbffc4e)
+2021-10-08T21:44:54.2189962+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:44:54.2273165+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:44:54.2288220+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:44:54.2491681+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:44:54.2492445+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:44:54.2492897+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:45:01.1647484+07:00 0HMCAD8OFEHP3:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:45:01.1760461+07:00  [INF] Queued work item cb8b498c-d15b-4b80-bec6-c319b3c6628b is starting. (1cbffc4e)
+2021-10-08T21:45:17.1945714+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:45:17.2004610+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:45:17.2017631+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:45:17.2069391+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:45:17.2070355+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:45:17.2070913+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:45:22.9251607+07:00 0HMCAD8VF0I67:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:45:22.9378466+07:00  [INF] Queued work item d4f5201b-2007-4bda-b948-01fe65d013b5 is starting. (1cbffc4e)
+2021-10-08T21:56:49.6065503+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:56:49.6189453+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:56:49.6223738+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:56:49.6287806+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:56:49.6288544+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:56:49.6289117+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T21:57:04.3137821+07:00 0HMCADFDQ7BSA:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T21:57:04.3269959+07:00  [INF] Queued work item d50a88c4-eb82-4623-a10f-6ab8f1cd0f1f is starting. (1cbffc4e)
+2021-10-08T21:57:37.4367433+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T21:57:37.4485499+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T21:57:37.4591818+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T21:57:37.4762264+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T21:57:37.4763358+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T21:57:37.4764102+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T22:03:47.5190636+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T22:03:47.5321110+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T22:03:47.5341075+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T22:03:47.5439902+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T22:03:47.5441296+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T22:03:47.5442307+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T22:03:53.0007387+07:00 0HMCADJA8BHRV:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T22:03:53.0211944+07:00  [INF] Queued work item 7a8334dd-c066-4036-80de-d74df1231a12 is starting. (1cbffc4e)
+2021-10-08T22:04:33.8216953+07:00  [INF] complete (4367d27f)
+2021-10-08T22:04:33.8258492+07:00  [INF] Queued work item d4844281-00de-49e9-b6e4-ad8164b51300 is starting. (1cbffc4e)
+2021-10-08T22:13:51.0838042+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2021-10-08T22:13:51.0899544+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2021-10-08T22:13:51.0910897+07:00  [INF] QueuedHostedService is running.
+
+Tap W to add a work item to the background queue.
+ (f56308fd)
+2021-10-08T22:13:51.0956551+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2021-10-08T22:13:51.0957082+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2021-10-08T22:13:51.0957276+07:00  [INF] Content root path: "D:\Test_BigchainDb\Api_BigchainDb\Api_BigchainDb" (b5d60022)
+2021-10-08T22:13:57.5255628+07:00 0HMCADOU6VSC0:00000002 [INF] MonitorAsync loop is starting. (441cfb3c)
+2021-10-08T22:13:57.5409871+07:00  [INF] Queued work item 64317745-acd4-42f8-ab3f-44099db386ab is starting. (1cbffc4e)

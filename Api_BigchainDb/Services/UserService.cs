@@ -3,6 +3,7 @@ using MongoDB.Driver;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Api_BigchainDb.DatabaseSettings;
+using MongoDB.Bson;
 
 namespace Api_BigchainDb.Services
 {
@@ -10,7 +11,7 @@ namespace Api_BigchainDb.Services
     {
         private readonly IMongoCollection<User> _users;
 
-        public UserService(IUserstoreDatabaseSettings settings)
+        public UserService(IStoreDatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
@@ -30,6 +31,11 @@ namespace Api_BigchainDb.Services
             await _users.InsertOneAsync(user);
             return user;
         }
+        public async Task<List<User>> CreateListAsync(List<User> user)
+        {
+            await _users.InsertManyAsync(user);
+            return user;
+        }
         public async Task UpdateAsync(string id, User user)
         {
             await _users.ReplaceOneAsync(c => c.Id == id, user);
@@ -39,4 +45,34 @@ namespace Api_BigchainDb.Services
             await _users.DeleteOneAsync(c => c.Id == id);
         }
     }
+
+    public class BookService : IBookService
+    {
+        private readonly IMongoCollection<Books> _books;
+        private readonly IMongoCollection<User> _users;
+        public BookService(IStoreDatabaseSettings settings)
+        {
+            var client = new MongoClient(settings.ConnectionString);
+            var database = client.GetDatabase(settings.DatabaseName);
+            _books = database.GetCollection<Books>(settings.BookCollectionName);
+            _users = database.GetCollection<User>(settings.UserCollectionName);
+        }
+
+        public async Task<List<Books>> GetAllAsync()
+        {
+            var docs = _users.Aggregate()//test join table
+                     .Lookup("books", "BookId", "_id", "asbooks")
+                     .As<BsonDocument>()
+                     .ToList();
+
+            foreach (var doc in docs)
+            {
+                var cc = doc.ToJson();
+            }
+
+            return await _books.Find(c => true).ToListAsync();
+        }
+
+    }
+
 }

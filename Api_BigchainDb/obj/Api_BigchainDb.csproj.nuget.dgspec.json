@@ -52,6 +52,14 @@
               "target": "Package",
               "version": "[2.13.1, )"
             },
+            "Nito.AsyncEx.Context": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Omnibasis.BigchainCSharp": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Serilog.Extensions.Logging.File": {
               "target": "Package",
               "version": "[2.0.0, )"
